@@ -8,7 +8,6 @@ Partial Class _Default
         Dim userLogin As New UserLogin()
 
         If (userLogin.login(Username.Text, Password.Text)) Then
-            Label1.Text = "Welcome to my humble site " & Username.Text
             Session("UserName") = Username.Text
             Server.Transfer("Homepage.aspx")
         Else

@@ -61,7 +61,7 @@
                 </div>
                 <div class="row" style="align-content:center">
                     <div class="col-md-12">
-                         <asp:Button ID="Next" runat="server" Text="Next Question" />                       
+                        <asp:Button ID="Button1" runat="server" Text="Button" onClick="Button1_Click" />                   
                     </div>
                 </div>
                  <div class="row" style="margin-top:10px">
