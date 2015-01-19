@@ -3,7 +3,7 @@ Imports System.Data
 
 Public Class Test
 
-    Public Function FillTest1(ByVal Test1Questions As List(Of String))
+    Public Function FillTest1(ByVal Test1Questions As Array) As Object
 
         Dim connection As OleDb.OleDbConnection = DatabaseConnection.Instance.GetConnection
         Dim sql = "SELECT Question, Unit1QuestionID " & "FROM [TestUnit1] "
@@ -18,7 +18,7 @@ Public Class Test
 
         Dim askQuestions(19) As String
         Dim value As Integer
-
+        Dim i As Integer
         For i = 0 To 9
             Randomize()                             ' Initialize the random-number generator.
             value = CInt(Int((9 * Rnd()) + 1))      ' Generate random value between 1 and 9. 
